@@ -12,6 +12,12 @@ export const Container = styled.div`
       justify-content: space-between;
     }
 
+  .headerD {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+
   div {
     background: var(--shape);
     padding: 1.5rem 2rem;
@@ -30,6 +36,10 @@ export const Container = styled.div`
     &.highlight-background {
       background: var(--green);
       color: #fff;
+    }
+    &.highlight-background-red {
+     background-color: #FF5E5E;
+      color: #000;
     }
   }
 `
