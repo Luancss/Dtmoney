@@ -3,6 +3,8 @@ import { useTransactions } from "../../hooks/useTransactions";
 
 export function TransactionTable() {
   const { transactions } = useTransactions();
+
+
   return (
     <Container>
       <table>
@@ -17,7 +19,7 @@ export function TransactionTable() {
 
         <tbody>
           {transactions.map((transaction) => (
-            <tr key={transaction.id}>
+            <tr className="remove" key={transaction.id}>
               <td>{transaction.title}</td>
               <td className={transaction.type}>
                 {new Intl.NumberFormat("pt-BR", {
@@ -26,10 +28,11 @@ export function TransactionTable() {
                 }).format(transaction.amount)}
               </td>
               <td>{transaction.category}</td>
-              <td>
+              <td className="flex">
                 {new Intl.DateTimeFormat("pt-BR").format(
                   new Date(transaction.createAt)
                 )}
+
               </td>
             </tr>
           ))}

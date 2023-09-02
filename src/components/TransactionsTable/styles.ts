@@ -15,6 +15,12 @@ export const Container = styled.div`
       line-height: 1.5rem;
     }
 
+    .flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     td {
       padding: 1rem 2rem;
       border: 0;
